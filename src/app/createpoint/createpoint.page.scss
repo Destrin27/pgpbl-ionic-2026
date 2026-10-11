@@ -1,0 +1,16 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.map-area {
+  flex: 1;              // ambil semua sisa tinggi
+  min-height: 250px;    // batas minimal di layar kecil
+  width: 100%;
+}
+
+.form-area {
+  flex-shrink: 0;       // tinggi form tidak ikut menyusut
+  background: var(--ion-background-color, #fff);
+}

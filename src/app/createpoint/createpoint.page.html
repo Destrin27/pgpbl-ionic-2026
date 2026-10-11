@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="backToMaps()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Create Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="false">
+  <div class="page-wrapper">
+
+    <!-- Peta: mengisi sisa ruang -->
+    <div id="mapcreate" class="map-area"></div>
+
+    <!-- Form + tombol: tinggi mengikuti isi -->
+    <div class="form-area">
+      <ion-item>
+        <ion-input
+          label="Name"
+          labelPlacement="stacked"
+          [(ngModel)]="name"
+          name="name"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Coordinates"
+          labelPlacement="stacked"
+          [(ngModel)]="coordinates"
+          name="coordinates"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea
+          label="Description"
+          labelPlacement="stacked"
+          placeholder="Type something in here"
+          [(ngModel)]="description"
+          name="description"
+        ></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="block" (click)="save()">SAVE</ion-button>
+    </div>
+
+  </div>
+</ion-content>
